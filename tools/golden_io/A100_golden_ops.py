@@ -10,7 +10,11 @@ import sys
 
 
 MINIO_ROOT = "minio/toolchain/golden_A100_op"
-DEFAULT_OUTPUT_ROOT = os.path.expanduser("~/A100-Golden-Ops")
+DEFAULT_OUTPUT_ROOT = os.path.join(
+    os.path.dirname(os.path.dirname(os.path.dirname(__file__))),
+    "data",
+    "golden_io"
+)
 
 # 直接 tar.gz 的普通算子
 DIRECT_TAR_OPS = {
